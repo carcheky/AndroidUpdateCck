@@ -15,6 +15,7 @@ cd FactoryImage
 cd ..
 
 echo "-------> instalando actualizacion"
+fastboot reboot-bootloader
 sleep 5
 fastboot flash bootloader FactoryImage/update/bootloader-hammerhead-*.img
 fastboot reboot-bootloader
@@ -29,8 +30,6 @@ fastboot flash cache FactoryImage/update/cache.img
 fastboot reboot-bootloader
 sleep 5
 fastboot flash system FactoryImage/update/system.img
-fastboot reboot-bootloader
-sleep 5
 fastboot reboot-bootloader
 sleep 5
 fastboot flash recovery multirom/TWRP_multirom_hammerhead_*.img

@@ -1,6 +1,7 @@
 echo "-------> reboot bootloader"
 adb reboot-bootloader
 echo "-------> preparando imagen"
+rm -fr FactoryImage/update
 cd FactoryImage
   mkdir update
   tar -xvf hammerhead*.tgz -C update

@@ -9,32 +9,26 @@ cd FactoryImage
     rm image-hammerhead-*.zip
   cd ..
 cd ..
-
-
-echo "-------> instalando actualización"
-
+echo "-------> instalando actualizacion"
 adb reboot bootloader
 sleep 5
-fastboot flash FactoryImage/update/bootloader bootloader-hammerhead-*.img
+fastboot flash bootloader FactoryImage/update/bootloader-hammerhead-*.img
 fastboot reboot-bootloader
 sleep 5
-fastboot flash FactoryImage/update/radio radio-hammerhead-*.img
+fastboot flash radio FactoryImage/update/radio-hammerhead-*.img
 fastboot reboot-bootloader
 sleep 5
-fastboot flash FactoryImage/update/boot boot.img
+fastboot flash boot FactoryImage/update/boot.img
 sleep 5
-fastboot flash FactoryImage/update/cache cache.img
+fastboot flash cache FactoryImage/update/cache.img
 sleep 5
-fastboot flash FactoryImage/update/system system.img
+fastboot flash system FactoryImage/update/system.img
 sleep 5
 fastboot reboot-bootloader
 sleep 5
 fastboot flash recovery multirom/TWRP_multirom_hammerhead_*.img
 sleep 5
 fastboot reboot-bootloader
-
-
-
 echo "-------> borrando archivos temporales"
 rm -fr FactoryImage/update
 sleep 5

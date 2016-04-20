@@ -1,3 +1,5 @@
+echo "-------> reboot bootloader"
+adb reboot-bootloader
 echo "-------> preparando imagen"
 cd FactoryImage
   mkdir update
